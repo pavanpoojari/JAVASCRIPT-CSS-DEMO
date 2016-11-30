@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+<script>
+	var students = [ {
+		Name : 'Pavan Poojary',
+		ID : 'S001',
+		Course : 'revGNIIT + DT',
+		attLecture : function() {
+			console.log('Giving Exam');
+		},
+		address : {
+			LineOne : 'Thane',
+			LineTwo : 'Airoli'
+		}
+	}, {
+		Name : 'Faisal Ansari',
+		ID : 'S002',
+		Course : 'revGNIIT + DT',
+		attLecture : function() {
+			console.log('Giving Exam');
+		},
+		address : {
+			LineOne : 'Mumbai',
+			LineTwo : 'Gathkopar'
+		}
+	} ];
+
+	window.onload = std;
+	function std() {
+		var div = document.getElementById('show');
+		var str = '';
+		//str += "<br/>";
+		str += "<table border='1' width='500'>";
+		str += "<tr> <th>ID</th> <th>Name</th> <th>Course</th> <th>Address</th> </tr>";
+
+		for (var i = 0; i < students.length; i++) {
+			//str += 'Student Name: ' + students[i].Name + '<br/>';
+			str += "<tr> <th>" + students[i].ID + "</th> <th>"
+					+ students[i].Name + "</th> <th>" + students[i].Course
+					+ "</th> <th>" + students[i].address.LineOne + ","
+					+ students[i].address.LineTwo + "</th> </tr>";
+		}
+		str += "</table>";
+		div.innerHTML = str;
+	}
+</script>
+
+<style type="text/css">
+/*Global Selector*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* element selector */
+div {
+	float: left;
+	padding: 5px;
+	margin: 5px;
+	height: 200px;
+	width: 935px;
+	border: 2px solid #ff0000;
+}
+/* id selector */
+#demo3 {
+	color: #00ff00;
+}
+/* class selector */
+.blue {
+	color: #0000ff;
+}
+
+/*selecting child elements*/
+div>ul>li {
+	list-style-type: none;
+}
+
+#demo3 ul li {
+	padding: 5px;
+	width: 222px;
+	background-color: #757575;
+	color: #ffffff;
+}
+</style>
+</head>
+<body>
+	<div id="show"></div>
+</body>
+</html>
